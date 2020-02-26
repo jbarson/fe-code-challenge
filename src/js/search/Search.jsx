@@ -19,8 +19,12 @@ const Search = ({
             />
             <div className="Search-content">
                 <div className="Spot-details">
-                    <SpotDetails />
-
+                    {selectedSpot &&
+                        <SpotDetails
+                            selectedSpot={selectedSpot}
+                            setSpot={setSpot}
+                        />
+                    }
                 </div>
             </div>
         </div>

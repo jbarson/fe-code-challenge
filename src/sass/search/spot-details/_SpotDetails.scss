@@ -1,13 +1,19 @@
 .SpotDetails-content {
     display: flex;
+    background-color: $color-white;
     flex-direction: column;
-    border: 1px solid #000000;
-    height: 300px;
+    min-height: 300px;
+    width: 80%;
     min-width: 450px;
     align-items: center;
+    margin: auto;
     justify-content: center;
-    p {
+    transition: all $animation;
+    p,
+    h2 {
+        text-align: center;
         flex-grow: 1;
+        width: 80%;
     }
     .close-button {
         align-self: flex-end;
@@ -16,7 +22,25 @@
         font-size: 2em;
     }
     .action-button {
-        width: 25%;
-        margin-bottom: 20px;
+        max-width: 50%;
+        margin: 10px;
     }
+}
+
+.spot-transition-enter,
+.list-transition-appear {
+    opacity: 0;
+}
+
+.spot-transition-enter-active,
+.spot-transition-appear-active {
+    opacity: 1;
+}
+
+.spot-transition-exit {
+    opacity: 1;
+}
+
+.spot-transition-exit-active {
+    opacity: 0;
 }
